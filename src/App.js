@@ -25,7 +25,7 @@ const data = [
 
  
 function App() {
-  const [movies, setMovies] = useState(data);
+  const [movies] = useState(data);
   return (
    <Router>
       <div className="App">

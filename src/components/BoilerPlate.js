@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Category from './Category'
+import {v4} from 'uuid'
 
 export default function BoilerPlate({ match, data }) {
     const BoilerData = data.find((boilerPlate)=>{
@@ -18,15 +19,15 @@ export default function BoilerPlate({ match, data }) {
     const tags = [];
     BoilerData.starring.forEach((star)=>{
         starring.push(
-            <p className="text-gray-100">{star}</p> )
+            <p key={v4()} className="text-gray-100">{star}</p> )
     })
     BoilerData.directors.forEach((director)=>{
         directors.push(
-            <p className="text-gray-100">{director}</p> )
+            <p key={v4()} className="text-gray-100">{director}</p> )
     });
     BoilerData.tags.forEach((tag)=>{
         tags.push(
-            <p className="rounded-md px-2 text-gray-200 bg-gray-500">{tag}</p>
+            <p key={v4()} className="rounded-md px-2 text-gray-200 bg-gray-500">{tag}</p>
         )
     })
     return (
