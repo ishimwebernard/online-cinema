@@ -29,7 +29,7 @@ export default function UpFrontMovie({ movie }) {
           <img id="upfr" className="w-full object-cover img-responsive-sm bg-gray-900 opacity-70 " src={moviePic} alt="mainmovie" />
            <div className="absolute flex top-72 w-full h-24 items-center px-4 md:px-16 md:block">
            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 md:hidden" viewBox="0 0 20 20" fill="#fff">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
             </svg>
             <p className="font-bold text-gray-200 text-4xl md:text-8xl">{movie.title}</p>
             <div className="hidden text-center w-full mt-12  md:block">

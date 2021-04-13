@@ -1,6 +1,7 @@
 /*eslint-disable */
 import React, {useState, useEffect} from 'react'
 import { Link, Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import {v4} from 'uuid'
 
 export default function Category({ title, items }) {
     const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -17,8 +18,8 @@ export default function Category({ title, items }) {
         if(counter < rows){
             let link = element.title.toString().replaceAll(' ', '-');
             cols.push(
-                <Link to={`${link}`}>
-                <div className=" h-60 bg-gray-700 mt-4 linear-data rounded-xl  border-1 border-gray-400 md:h-96 ">
+                <Link key={v4()} to={`${link}`}>
+                <div key={v4()} className=" h-60 bg-gray-700 mt-4 linear-data rounded-xl  border-1 border-gray-400 md:h-96 ">
                 <img className="row-span-5 h-4/6 w-full  object-fill" alt={element.title} src={element.image}/>
                 <p className="font-normal mt-2 text-gray-200 px-2 md:text-xl ">{element.title.toString().substring(0,25) + '...'}<br></br><span className="text-sweet-potato">{element.price}</span>
                 </p>
