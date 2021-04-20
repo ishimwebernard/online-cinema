@@ -9,7 +9,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      'sans': ['Graphik']
+      'sans': ['Poppins']
     }
   },
   variants: {
