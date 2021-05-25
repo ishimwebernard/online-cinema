@@ -33,7 +33,7 @@ export default function BoilerPlate({ match, data }) {
     return (
              <div className=" h-full w-full h-full bg-gray-900">
               <Header nofixed={true} />
-              <div className="grid grid-cols-3 px-5 space-x-2 md:px-28 md:grid-cols-5 md:10 ">
+              <div className="grid grid-cols-3  space-x-2 px-64 md:grid-cols-5 ">
                <div>
                <img className="w-full" src={BoilerData.image} alt={BoilerData.title} />
                 <div className="hidden md:block">

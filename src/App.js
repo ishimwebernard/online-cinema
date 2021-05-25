@@ -18,9 +18,7 @@ const data = [
   {tags,title: 'Alligator Sky', image: 'https://canvas-bridge.tubitv.com/yieRfNe99utiLjghJiF6YA_9Zu4=/0x120:2000x2974/400x574/smart/img.adrise.tv/8d4b4505-2e9e-49fa-9281-0269bf4f3af5.jpg', description, directors, starring, banner, dateReleased,price},
   {tags,title: 'Saints and Soldiers: The Void', image: 'https://canvas-bridge.tubitv.com/IcWirqwWQQkNupvXYX26zMYiXDI=/400x574/smart/img.adrise.tv/cf67fa7f-d8b4-409a-af17-df476f8964ff.jpg', description, directors, starring, banner, dateReleased,price},
   {tags,title: 'Niagara Forest', image: image, description, directors, starring, banner, dateReleased,price},
-  {tags,title: 'Julias Kanimba', image: image, description, directors, starring, banner, dateReleased,price},
-  {tags,title: 'OJane Doe', image: image, description, directors, starring, banner, dateReleased,price},
-  {tags,title: 'Minani Kirabo', image: image, description, directors, starring, banner, dateReleased,price},
+  
 ];
 
  

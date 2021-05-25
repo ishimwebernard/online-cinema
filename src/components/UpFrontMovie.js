@@ -4,34 +4,41 @@ import { TimelineMax } from 'gsap/all'
 
 export default function UpFrontMovie({ movie }) {
     let moviePic = movie.banner;
+    let movieTitle = 'Ace of heart';
     const banner1 = movie.banner;
     const otherMoviePic = 'https://canvas-bridge.tubitv.com/tvSrRPWTtjMApXtfkbTCesAOtdM=/0x620:2000x1361/1920x676/smart/img.adrise.tv/49182b8f-c258-4a6c-8252-20991fffda21.jpg';
     const banner2 = 'https://canvas-bridge.tubitv.com/tvSrRPWTtjMApXtfkbTCesAOtdM=/0x620:2000x1361/1920x676/smart/img.adrise.tv/49182b8f-c258-4a6c-8252-20991fffda21.jpg';
     let recentPicture = 0;
+    let recentTitle = 0;
     const pictures = [banner1, otherMoviePic, banner2];
+    const titles = [movie.title, "Expo 2021", "Chogm 2005" ]
     const tl = new TimelineMax();
       
         setInterval(()=>{
             try{
             moviePic = (pictures[recentPicture]);
+            movieTitle = (titles[recentTitle]);
             recentPicture += 1;
-            recentPicture = recentPicture === 2 ? 0:recentPicture;
+            recentTitle += 1;
+            recentPicture = recentPicture === 3 ? 0:recentPicture;
+            recentTitle = recentTitle === 3 ? 0:recentTitle;
             if(document.getElementById('upfr') !== null || document.getElementById('upfr') !== undefined){
                 document.getElementById('upfr').src = moviePic;
+                document.getElementById('upfrtitle').innerHTML = movieTitle;
                 tl.fromTo(document.getElementById('upfr'), 2, { opacity: '0%'}, { opacity: '70%'}, "+=0")
             }
             }catch(err){}
         }, 5000);
-
+        //md:grid md:grid-rows-3
 
     return (
         <div className="relative w-full lg:h-1/2 md:h-1/2">
           <img id="upfr" className="w-full object-cover img-responsive-sm" src={moviePic} alt="mainmovie" />
-          <div className="absolute top-0 h-full b-t-g w-full md:grid md:grid-rows-3">
-          <div>{' '}</div>
-               <p className="font-bold ml-16 text-4xl text-gray-100 absolute bottom-0 md:relative  md:text-8xl ">Ace Of Heart</p>
+          <div className="absolute md:px-64 top-3/4   w-full  ">
+          {/* <div>{' '}</div> */}
+               <p id="upfrtitle" className="font-bold  m-auto text-4xl text-gray-100    md:text-8xl ">{movieTitle}</p>
            <p className="hidden md:block md:w-full md:text-center">
-                <span className="text-gray-100 px-16 py-8 bg-cuny-red font-semibold text-xl cursor-pointer ">Watch Now</span>
+                <span className="text-gray-100 px-12 py-4 bg-cuny-red font-semibold text-xl cursor-pointer ">Watch Now</span>
            </p>
 
             

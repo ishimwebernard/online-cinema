@@ -16,10 +16,8 @@ export default function LandingPage({ movies }) {
         <div className="h-full w-full bg-gray-800">
               <Header />
             <UpFrontMovie movie={movies[0]} />
-            <Category key={uuidv4()} items={movies} title="Most Popular" />
-            <Category key={uuidv4()} items={movies} title="Comedy" />
-            <Category key={uuidv4()} items={movies} title="Family Movies" />
-            <Category key={uuidv4()} items={movies} title="Action" />
+            <Category key={uuidv4()} items={movies} title="Movies" />
+            <Category key={uuidv4()} items={movies} title="Events" />
             <Footer />
         </div>
     )
